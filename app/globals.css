@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --paper: #f5efe0;
+  --paper-deep: #ece2ca;
+  --ink: #1c1917;
+  --ink-faded: #3f3a35;
+  --oak: #5b4636;
+  --sage: #8a9a7b;
+  --poppy: #d97706;
+  --void: #050505;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background-color: var(--void);
+  color: var(--paper);
+}
+
+.smallcaps {
+  font-variant: small-caps;
+  letter-spacing: 0.08em;
+}
+
+/* Page styling — layered so the page has:
+   1. a textured paper underlayer
+   2. a gutter shadow along the left edge (the binding pulls light away)
+   3. a softer counter-shadow on the right so corners recede slightly */
+.page {
+  position: relative;
+  background-color: var(--paper);
+  background-image: url("/art/paper-grain.svg");
+  background-size: 320px 320px;
+  background-blend-mode: multiply;
+  color: var(--ink);
+  overflow: hidden;
+  box-shadow:
+    inset 28px 0 36px -24px rgba(28, 20, 10, 0.35),
+    inset -14px 0 28px -24px rgba(28, 20, 10, 0.18),
+    inset 0 0 80px rgba(91, 70, 54, 0.05);
+}
+
+.page-hard {
+  background-color: var(--paper);
+  background-image: url("/art/paper-grain.svg");
+  background-size: 320px 320px;
+  background-blend-mode: multiply;
+  color: var(--ink);
+}
+
+.stf__parent {
+  filter: drop-shadow(0 40px 80px rgba(0, 0, 0, 0.6))
+    drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
