@@ -165,7 +165,6 @@ const Book = forwardRef<any, {
   }, []);
 
   return (
-    // @ts-expect-error — react-pageflip's types lag its runtime API
     <HTMLFlipBook
       ref={ref}
       width={width}
