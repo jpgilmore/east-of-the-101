@@ -21,13 +21,13 @@ export default function Epigraph() {
           </p>
         </div>
 
-        <div className="mt-12 flex items-center justify-center gap-4 text-ink-soft/40">
+        <div className="mt-6 flex items-center justify-center gap-4 text-ink-soft/40">
           <span className="h-px w-8 bg-current" />
           <span style={{ fontFamily: G }}>✻</span>
           <span className="h-px w-8 bg-current" />
         </div>
 
-        <div className="mt-12 text-center">
+        <div className="mt-6 text-center">
           <div
             className="italic text-ink-faded leading-relaxed text-sm"
             style={{ fontFamily: G }}
